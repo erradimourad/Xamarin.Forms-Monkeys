@@ -7,6 +7,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace Monkeys.Droid
 {
@@ -15,6 +18,8 @@ namespace Monkeys.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+            AppCenter.Start("808cfc16-4fd0-4ae4-9278-b6fe43d78f3e",
+                   typeof(Analytics), typeof(Crashes));
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -25,6 +30,7 @@ namespace Monkeys.Droid
             ImageCircle.Forms.Plugin.Droid.ImageCircleRenderer.Init();
 
             LoadApplication(new App());
+
         }
     }
 }
