@@ -37,6 +37,8 @@
     <BundleAssemblies>false</BundleAssemblies>
     <AndroidSupportedAbis />
     <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
